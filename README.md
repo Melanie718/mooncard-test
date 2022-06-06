@@ -1,24 +1,28 @@
-# README
+# Mooncard front-end test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting started
 
-Things you may want to cover:
+```sh
+# Clone the repo
+$ git clone
 
-* Ruby version
+# Navigate to directory
+$ cd mooncard-test
 
-* System dependencies
+# Install dependencies
+$ bundle install
 
-* Configuration
+# Setup database
+$ rails db:setup
 
-* Database creation
+# Start the server
+$ rails s
+```
 
-* Database initialization
+## API Routes
 
-* How to run the test suite
+### Employees
 
-* Services (job queues, cache servers, search engines, etc.)
+#### `GET /employees.json`
 
-* Deployment instructions
-
-* ...
+This route allows you to list the employees.
