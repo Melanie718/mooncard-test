@@ -21,7 +21,7 @@ function App() {
               <Card style={{ width: "14rem" }}>
                 <Card.Body>
                   <Card.Title className="pokemon-title">
-                    {pokemon.url.split("/")[6]} # {pokemon.name}
+                  #{pokemon.url.split("/")[6]} {pokemon.name}
                   </Card.Title>
                   <Card.Img
                     src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
