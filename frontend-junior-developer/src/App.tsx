@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import useFetch, { ApiResponse } from "./API";
+import "./App.css";
+import Pokemon from "./Models/Pokemon";
 
 function App() {
+  const pokemons: ApiResponse = useFetch(
+    "https://pokeapi.co/api/v2/pokemon?limit=150&offset=0"
+  );
+  if (!pokemons.loading) console.log(pokemons);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Application test mooncard ! </h2>
+      {pokemons &&
+        pokemons.data &&
+        pokemons.data.results.map((pokemon: Pokemon) => (
+          <div className="pokemon-list" key={pokemon.id}>
+            {pokemon.name}
+          </div>
+        ))}
     </div>
   );
 }
