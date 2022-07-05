@@ -8,7 +8,6 @@ function App() {
   const pokemons: ApiResponse = useFetch(
     "https://pokeapi.co/api/v2/pokemon?limit=150&offset=0"
   );
-  if (!pokemons.loading) console.log(pokemons);
 
   return (
     <div className="App">
@@ -21,7 +20,7 @@ function App() {
               <Card style={{ width: "14rem" }}>
                 <Card.Body>
                   <Card.Title className="pokemon-title">
-                  #{pokemon.url.split("/")[6]} {pokemon.name}
+                    #{pokemon.url.split("/")[6]} {pokemon.name}
                   </Card.Title>
                   <Card.Img
                     src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
