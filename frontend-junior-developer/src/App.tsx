@@ -6,7 +6,7 @@ import ScrollUp from "./components/ScrollUp";
 
 function App() {
   const pokemons: ApiResponse = useFetch(
-    "https://pokeapi.co/api/v2/pokemon?limit=150&offset=0"
+    "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0"
   );
 
   return (
