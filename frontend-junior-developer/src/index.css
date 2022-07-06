@@ -1,28 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Staatliches&display=swap');
+
 
 /*////////// base styles //////////*/
 * {
     max-width: 100%;
     min-width: fit-content;
     font-family: "Quicksand";
+    text-align: center;
 }
+
+h1 {
+    margin-bottom: 30px;
+    font-family: 'Staatliches', cursive;
+    font-size: 100px;
+}
+
 
 .pokemon-list {
     margin: 40px;
     margin-top: 20px;
 }
 
+
+
 .pokemon-preview {
     padding: 5px;
 }
+.pokemon-preview .card:hover {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
 
 .pokemon-title {
     text-transform: capitalize;
 }
 
+
 .ScrollUp {
     cursor: pointer;
-    color: rgb(143, 140, 140);
+    color: #ececec;
     position: fixed;
     bottom: 10px;
     right: 10px;

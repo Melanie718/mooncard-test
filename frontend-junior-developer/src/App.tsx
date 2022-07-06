@@ -3,6 +3,7 @@ import "./App.css";
 import Pokemon from "./Models/Pokemon";
 import { Card } from "react-bootstrap";
 import ScrollUp from "./components/ScrollUp";
+import { MdCatchingPokemon } from "react-icons/md";
 
 function App() {
   const pokemons: ApiResponse = useFetch(
@@ -11,12 +12,18 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Pokédex ! </h1>
+      <h1>Pokédex </h1>
       <div className="pokemon-list d-flex justify-content-center flex-wrap">
-        {pokemons &&
-          pokemons.data &&
+        {pokemons.loading && (
+          <div className="loading">
+            <h3>Une requête sauvage apparaît ! </h3>
+            <MdCatchingPokemon size={90} />
+            <h3>Chargement en cours ...</h3>
+          </div>
+        )}
+        {!pokemons.loading && pokemons.data &&
           pokemons.data.results.map((pokemon: Pokemon) => (
-            <div className="pokemon-preview">
+            <div className="pokemon-preview" key={pokemon.url.split("/")[6]}>
               <Card style={{ width: "14rem" }}>
                 <Card.Body>
                   <Card.Title className="pokemon-title">

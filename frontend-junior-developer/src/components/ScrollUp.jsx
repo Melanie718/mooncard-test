@@ -6,7 +6,6 @@ const ScrollUp = () => {
   };
   return (
     <div className="ScrollUp">
-        
       <FaArrowCircleUp onClick={handleClick} size={50} />
     </div>
   );
