@@ -8,6 +8,8 @@
     min-width: fit-content;
     font-family: "Quicksand";
     text-align: center;
+    margin-top: 5px;
+    background-color: #ececec;
 }
 
 h1 {
@@ -16,17 +18,24 @@ h1 {
     font-size: 100px;
 }
 
-
 .pokemon-list {
     margin: 40px;
     margin-top: 20px;
 }
 
-
-
 .pokemon-preview {
     padding: 5px;
 }
+
+.pokemon-preview .card {
+    width: 14rem;
+}
+
+.pokemon-preview div,
+img {
+    background-color: white;
+}
+
 .pokemon-preview .card:hover {
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
@@ -39,9 +48,51 @@ h1 {
 
 .ScrollUp {
     cursor: pointer;
-    color: #ececec;
+    color: gray;
     position: fixed;
     bottom: 10px;
     right: 10px;
     z-index: 1;
+}
+
+.error-alert {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.alert-heading {
+    background-color: #f8d7da;
+}
+
+.fade {
+    max-width: fit-content;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.fade p {
+    background-color: #f8d7da;
+}
+
+.btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 640px) {
+    h1 {
+        font-size: 80px;
+    }
+
+    .h5 {
+        font-size: 0.8rem;
+    }
+
+    .pokemon-preview .card {
+        width: 9rem;
+    }
 }

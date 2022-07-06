@@ -1,4 +1,4 @@
-import { FaArrowCircleUp } from "react-icons/fa";
+import { IoIosArrowUp } from "react-icons/io";
 
 const ScrollUp = () => {
   const handleClick = () => {
@@ -6,7 +6,7 @@ const ScrollUp = () => {
   };
   return (
     <div className="ScrollUp">
-      <FaArrowCircleUp onClick={handleClick} size={50} />
+      <IoIosArrowUp onClick={handleClick} size={50} />
     </div>
   );
 };

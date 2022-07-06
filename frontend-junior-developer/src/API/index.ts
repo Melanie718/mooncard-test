@@ -17,7 +17,6 @@ const useFetch = (url: string): ApiResponse => {
 
     const getAPIData = async () => {
         setLoading(true);
- 
         try {
             const apiResponse = await fetch(url);
             const json = await apiResponse.json();
@@ -28,12 +27,12 @@ const useFetch = (url: string): ApiResponse => {
             setError(error)
         }
         //To enjoy loading screen
-        setTimeout(()=> setLoading(false),900);
+        setTimeout(() => setLoading(false), 700);
     };
 
     useEffect(() => {
         getAPIData();
-    },[]);
+    }, []);
 
     return { status, statusText, data, error, loading };
 };
