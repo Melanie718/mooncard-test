@@ -50,3 +50,12 @@ You can use the [Poke API](https://pokeapi.co/) or whichever public API you can 
 
 - [x] Write some style to display your data beautifully
 - [x] Make necessary changes for the app to have visible changes when playing with responsive
+
+### Preview
+
+
+![Accueil](https://user-images.githubusercontent.com/77612837/177606859-ef379709-f565-4356-b601-5166a70d3301.png)
+
+### Error Alert 
+
+![ErrorAlert2Short](https://user-images.githubusercontent.com/77612837/177607556-f265d8fe-6c92-4c47-9028-9e9539ef4468.png)
