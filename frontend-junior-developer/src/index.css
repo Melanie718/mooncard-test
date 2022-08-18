@@ -83,9 +83,10 @@ img {
     right: 10px;
 }
 
-.search-bar {
-    max-width: 50%;
+#search-bar {
+    max-width: 40%;
     margin: auto;
+    min-width: 280px;
 }
 
 /* ///// media querries ////// */
@@ -101,5 +102,9 @@ img {
 
     .pokemon-preview .card {
         width: 9rem;
+    }
+
+    .form-control{
+        font-size: 0.8rem;
     }
 }
